@@ -1,0 +1,16 @@
+# WSL 2 settings (https://learn.microsoft.com/windows/wsl/wsl-config)
+# Run `wsl --shutdown` after changing this file.
+
+[wsl2]
+# About half of this PC (31 GB RAM, 14 threads)
+memory=16GB
+processors=8
+# Share localhost with Windows both ways; works better with VPNs
+networkingMode=mirrored
+dnsTunneling=true
+autoProxy=true
+
+[experimental]
+# Give unused memory back to Windows and keep the virtual disk small
+autoMemoryReclaim=gradual
+sparseVhd=true

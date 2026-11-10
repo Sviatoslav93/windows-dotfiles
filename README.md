@@ -18,6 +18,8 @@ Linux dotfiles (github.com/Sviatoslav93/dotfiles); the starship, git and Alacrit
 | Claude Code | `dot_claude/settings.json` | `~/.claude/settings.json` |
 | Apps | `winget/packages.json` | installed by `run_onchange_before_10-winget.ps1.tmpl` |
 | Windows settings | `run_onchange_after_30-windows-settings.ps1` | Explorer options, Developer Mode |
+| WSL config | `dot_wslconfig` | `~/.wslconfig` |
+| WSL | `run_onchange_after_40-wsl.ps1` | installs WSL 2 + Ubuntu (admin) |
 
 nvim is the default editor (`$EDITOR`, git). Plugins install on first launch (lazy.nvim); treesitter
 parsers are compiled with zig. Zellij starts locked: `Ctrl g` unlocks it, and `zellij --layout agent`
@@ -39,6 +41,19 @@ applies the Windows settings (show file extensions and hidden files; Developer M
 
 Only `~/.claude/settings.json` is tracked from `~/.claude`: the rest of that folder (and `~/.claude.json`)
 holds login tokens and chat history and must never be committed.
+
+## WSL
+
+Run as admin, `chezmoi apply` installs WSL 2 with Ubuntu. After that, reboot and open **Ubuntu** once to
+create your Linux user. Then, inside Ubuntu, load the Linux dotfiles (a separate repo that manages
+everything inside WSL; this repo only handles the Windows side, including `~/.wslconfig`):
+
+```sh
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
+~/.local/bin/chezmoi init --apply Sviatoslav93/dotfiles
+```
+
+After editing `~/.wslconfig`, run `wsl --shutdown` so the new settings take effect.
 
 ## Daily use
 

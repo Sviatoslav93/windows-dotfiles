@@ -12,6 +12,7 @@
         { "PackageIdentifier": "Git.Git" },
         { "PackageIdentifier": "Microsoft.PowerShell" },
         { "PackageIdentifier": "Microsoft.WindowsTerminal" },
+        { "PackageIdentifier": "Microsoft.WSL" },
         { "PackageIdentifier": "Alacritty.Alacritty" },
         { "PackageIdentifier": "Starship.Starship" },
         { "PackageIdentifier": "ajeetdsouza.zoxide" },
