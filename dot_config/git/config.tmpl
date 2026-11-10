@@ -23,6 +23,8 @@
 	editor = nvim
 	# Keep files exactly as committed (no CRLF conversion)
 	autocrlf = false
+	# Use Windows OpenSSH so git shares its ssh-agent (and the signing key)
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 
 [interactive]
 	diffFilter = delta --color-only

@@ -15,7 +15,9 @@ Linux dotfiles (github.com/Sviatoslav93/dotfiles); the starship, git and Alacrit
 | Neovim | `AppData/Local/nvim/` | `%LOCALAPPDATA%\nvim\` |
 | Zellij | `AppData/Roaming/Zellij/config/` | `%APPDATA%\Zellij\config\` |
 | lazygit | `AppData/Local/lazygit/config.yml` | `%LOCALAPPDATA%\lazygit\` |
+| Claude Code | `dot_claude/settings.json` | `~/.claude/settings.json` |
 | Apps | `winget/packages.json` | installed by `run_onchange_before_10-winget.ps1.tmpl` |
+| Windows settings | `run_onchange_after_30-windows-settings.ps1` | Explorer options, Developer Mode |
 
 nvim is the default editor (`$EDITOR`, git). Plugins install on first launch (lazy.nvim); treesitter
 parsers are compiled with zig. Zellij starts locked: `Ctrl g` unlocks it, and `zellij --layout agent`
@@ -27,12 +29,16 @@ Git commit signing is turned on automatically once `~/.ssh/id_ed25519.pub` exist
 
 ```powershell
 winget install twpayne.chezmoi
-git clone <this repo> D:\windows-dotfiles
+git clone https://github.com/Sviatoslav93/windows-dotfiles.git D:\windows-dotfiles
 chezmoi init --source D:\windows-dotfiles
 chezmoi apply
 ```
 
-`apply` installs the winget packages, then the PowerShell module PSFzf, then writes the configs.
+`apply` installs the winget packages, then the PowerShell module PSFzf, then writes the configs, then
+applies the Windows settings (show file extensions and hidden files; Developer Mode only when run as admin).
+
+Only `~/.claude/settings.json` is tracked from `~/.claude`: the rest of that folder (and `~/.claude.json`)
+holds login tokens and chat history and must never be committed.
 
 ## Daily use
 
