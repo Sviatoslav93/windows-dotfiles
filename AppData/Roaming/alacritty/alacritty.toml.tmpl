@@ -1,0 +1,11 @@
+[general]
+import = [
+  "{{ .chezmoi.homeDir | replace "\\" "/" }}/AppData/Roaming/alacritty/font.toml",
+  "{{ .chezmoi.homeDir | replace "\\" "/" }}/AppData/Roaming/alacritty/font-size.toml",
+  "{{ .chezmoi.homeDir | replace "\\" "/" }}/AppData/Roaming/alacritty/shared.toml",
+]
+working_directory = "D:/"
+
+[terminal.shell]
+program = "pwsh"
+args = ["-NoLogo"]

@@ -1,0 +1,9 @@
+# Installs everything in winget/packages.json.
+# chezmoi re-runs this only when that file changes:
+# packages.json hash: {{ include "winget/packages.json" | sha256sum }}
+
+$manifest = Join-Path {{ .chezmoi.sourceDir | quote }} "winget/packages.json"
+Write-Host "Installing winget packages from $manifest"
+winget import -i $manifest --accept-package-agreements --accept-source-agreements --ignore-unavailable --disable-interactivity
+# winget returns non-zero when some packages are already installed; don't fail the apply over that.
+exit 0

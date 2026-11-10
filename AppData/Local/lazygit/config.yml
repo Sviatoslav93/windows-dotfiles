@@ -1,0 +1,51 @@
+gui:
+  nerdFontsVersion: "3"
+  showFileTree: true
+  showRandomTip: false
+  showBottomLine: true
+  showCommandLog: false
+  showIcons: true
+  border: rounded
+  theme:
+    activeBorderColor:
+      - "#58a6ff"
+      - bold
+    inactiveBorderColor:
+      - "#30363d"
+    searchingActiveBorderColor:
+      - "#d29922"
+      - bold
+    optionsTextColor:
+      - "#39c5cf"
+    selectedLineBgColor:
+      - "#1f3a5f"
+    cherryPickedCommitBgColor:
+      - "#21262d"
+    cherryPickedCommitFgColor:
+      - "#d2a8ff"
+    unstagedChangesColor:
+      - "#ff7b72"
+    defaultFgColor:
+      - "#e6edf3"
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+os:
+  editPreset: nvim
+refresher:
+  refreshInterval: 5
+  fetchInterval: 60
+update:
+  method: never
+notARepository: quit
+keybinding:
+  universal:
+    quit: "q"
+    return: "<esc>"
+    prevItem: "k"
+    nextItem: "j"
+    prevPage: "K"
+    nextPage: "J"
+    scrollUpMain: "<c-u>"
+    scrollDownMain: "<c-d>"

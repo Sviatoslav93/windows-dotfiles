@@ -1,0 +1,133 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "sendInput",
+                "input": "\u001b\r"
+            },
+            "id": "User.sendInput.ShiftEnter",
+            "keys": "shift+enter"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "keybindings":
+    [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu":
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "GitHub Dark Default",
+            "cursorShape": "bar",
+            "font":
+            {
+                "face": "JetBrainsMono Nerd Font Mono",
+                "size": 12
+            },
+            "historySize": 100000,
+            "padding": "10",
+            "startingDirectory": "D:\\"
+        },
+        "list":
+        [
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes":
+    [
+        {
+            "name": "GitHub Dark Default",
+            "background": "#0D1117",
+            "foreground": "#E6EDF3",
+            "cursorColor": "#2F81F7",
+            "selectionBackground": "#264F78",
+            "black": "#484F58",
+            "red": "#FF7B72",
+            "green": "#3FB950",
+            "yellow": "#D29922",
+            "blue": "#58A6FF",
+            "purple": "#BC8CFF",
+            "cyan": "#39C5CF",
+            "white": "#B1BAC4",
+            "brightBlack": "#6E7681",
+            "brightRed": "#FFA198",
+            "brightGreen": "#56D364",
+            "brightYellow": "#E3B341",
+            "brightBlue": "#79C0FF",
+            "brightPurple": "#D2A8FF",
+            "brightCyan": "#56D4DD",
+            "brightWhite": "#FFFFFF"
+        },
+        {
+            "name": "Kanagawa Dragon",
+            "background": "#181616",
+            "foreground": "#C5C9C5",
+            "cursorColor": "#FF8A5C",
+            "selectionBackground": "#2D4F67",
+            "black": "#0D0C0C",
+            "red": "#C4746E",
+            "green": "#8A9A7B",
+            "yellow": "#C4B28A",
+            "blue": "#8BA4B0",
+            "purple": "#A292A3",
+            "cyan": "#8EA4A2",
+            "white": "#C8C093",
+            "brightBlack": "#A6A69C",
+            "brightRed": "#E46876",
+            "brightGreen": "#87A987",
+            "brightYellow": "#E6C384",
+            "brightBlue": "#7FB4CA",
+            "brightPurple": "#938AA9",
+            "brightCyan": "#7AA89F",
+            "brightWhite": "#C5C9C5"
+        }
+    ],
+    "themes": []
+}

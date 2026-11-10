@@ -1,0 +1,50 @@
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+opacity = 1
+
+# GitHub Dark Default
+[colors.primary]
+foreground = "#e6edf3"
+background = "#0d1117"
+
+[colors.cursor]
+text = "#0d1117"
+cursor = "#2f81f7"
+
+[colors.selection]
+text = "CellForeground"
+background = "#264f78"
+
+[colors.normal]
+black = "#484f58"
+red = "#ff7b72"
+green = "#3fb950"
+yellow = "#d29922"
+blue = "#58a6ff"
+magenta = "#bc8cff"
+cyan = "#39c5cf"
+white = "#b1bac4"
+
+[colors.bright]
+black = "#6e7681"
+red = "#ffa198"
+green = "#56d364"
+yellow = "#e3b341"
+blue = "#79c0ff"
+magenta = "#d2a8ff"
+cyan = "#56d4dd"
+white = "#ffffff"
+
+[cursor]
+style = { shape = "Beam", blinking = "Never" }
+
+[scrolling]
+history = 100000
+
+[keyboard]
+bindings = [
+  { key = "F11", action = "ToggleFullscreen" },
+  { key = "Return", mods = "Shift", chars = "\u001B\r" },
+]

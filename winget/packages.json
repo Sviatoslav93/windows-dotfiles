@@ -1,0 +1,41 @@
+{
+  "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+  "Sources": [
+    {
+      "SourceDetails": {
+        "Name": "winget",
+        "Argument": "https://cdn.winget.microsoft.com/cache",
+        "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+        "Type": "Microsoft.PreIndexed.Package"
+      },
+      "Packages": [
+        { "PackageIdentifier": "Git.Git" },
+        { "PackageIdentifier": "Microsoft.PowerShell" },
+        { "PackageIdentifier": "Microsoft.WindowsTerminal" },
+        { "PackageIdentifier": "Alacritty.Alacritty" },
+        { "PackageIdentifier": "Starship.Starship" },
+        { "PackageIdentifier": "ajeetdsouza.zoxide" },
+        { "PackageIdentifier": "twpayne.chezmoi" },
+        { "PackageIdentifier": "junegunn.fzf" },
+        { "PackageIdentifier": "BurntSushi.ripgrep.MSVC" },
+        { "PackageIdentifier": "sharkdp.fd" },
+        { "PackageIdentifier": "sharkdp.bat" },
+        { "PackageIdentifier": "eza-community.eza" },
+        { "PackageIdentifier": "dandavison.delta" },
+        { "PackageIdentifier": "GitHub.cli" },
+        { "PackageIdentifier": "jqlang.jq" },
+        { "PackageIdentifier": "7zip.7zip" },
+        { "PackageIdentifier": "bootandy.dust" },
+        { "PackageIdentifier": "dbrgn.tealdeer" },
+        { "PackageIdentifier": "Fastfetch-cli.Fastfetch" },
+        { "PackageIdentifier": "Neovim.Neovim" },
+        { "PackageIdentifier": "Zellij.Zellij" },
+        { "PackageIdentifier": "JesseDuffield.lazygit" },
+        { "PackageIdentifier": "LuaLS.lua-language-server" },
+        { "PackageIdentifier": "zig.zig" },
+        { "PackageIdentifier": "DEVCOM.JetBrainsMonoNerdFont" },
+        { "PackageIdentifier": "Microsoft.VisualStudioCode" }
+      ]
+    }
+  ]
+}
