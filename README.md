@@ -19,7 +19,7 @@ Linux dotfiles (github.com/Sviatoslav93/dotfiles); the starship, git and Alacrit
 | Apps | `winget/packages.json` | installed by `run_onchange_before_10-winget.ps1.tmpl` |
 | Windows settings | `run_onchange_after_30-windows-settings.ps1` | Explorer options, Developer Mode |
 | WSL config | `dot_wslconfig` | `~/.wslconfig` |
-| WSL | `run_onchange_after_40-wsl.ps1` | installs WSL 2 + Ubuntu (admin) |
+| WSL | `run_after_40-wsl.ps1` | installs WSL 2 + Ubuntu (admin) |
 | WSL Linux configs | `wsl/home/` | `~` inside Ubuntu, via `wsl/setup.sh` |
 
 nvim is the default editor (`$EDITOR`, git). Plugins install on first launch (lazy.nvim); treesitter

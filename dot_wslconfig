@@ -11,6 +11,5 @@ dnsTunneling=true
 autoProxy=true
 
 [experimental]
-# Give unused memory back to Windows and keep the virtual disk small
+# Give unused memory back to Windows
 autoMemoryReclaim=gradual
-sparseVhd=true
