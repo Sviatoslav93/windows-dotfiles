@@ -45,13 +45,17 @@ holds login tokens and chat history and must never be committed.
 ## WSL
 
 Run as admin, `chezmoi apply` installs WSL 2 with Ubuntu. After that, reboot and open **Ubuntu** once to
-create your Linux user. Then, inside Ubuntu, load the Linux dotfiles (a separate repo that manages
-everything inside WSL; this repo only handles the Windows side, including `~/.wslconfig`):
+create your Linux user. Then, inside Ubuntu, install the Linux dotfiles (a separate repo, not chezmoi:
+its `install.sh` installs apt packages and tools, then symlinks the configs with GNU Stow; this repo
+only handles the Windows side, including `~/.wslconfig`):
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
-~/.local/bin/chezmoi init --apply Sviatoslav93/dotfiles
+git clone https://github.com/Sviatoslav93/dotfiles.git ~/dotfiles
+cd ~/dotfiles && ./install.sh
 ```
+
+`install.sh` was written for desktop Ubuntu, so a few steps (WezTerm, fonts, Flatpak/LocalSend,
+Syncthing, zram) are not useful inside WSL, and zram may fail there and stop the script early.
 
 After editing `~/.wslconfig`, run `wsl --shutdown` so the new settings take effect.
 
