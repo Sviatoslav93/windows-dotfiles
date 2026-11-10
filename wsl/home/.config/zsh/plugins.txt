@@ -1,0 +1,14 @@
+# Productivity
+zsh-users/zsh-autosuggestions
+
+# Better completions
+zsh-users/zsh-completions kind:clone
+
+# Interactive completion
+Aloxaf/fzf-tab
+
+# History search
+zsh-users/zsh-history-substring-search
+
+# Must load after other widget-defining plugins above
+zsh-users/zsh-syntax-highlighting

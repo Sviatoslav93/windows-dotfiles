@@ -20,6 +20,7 @@ Linux dotfiles (github.com/Sviatoslav93/dotfiles); the starship, git and Alacrit
 | Windows settings | `run_onchange_after_30-windows-settings.ps1` | Explorer options, Developer Mode |
 | WSL config | `dot_wslconfig` | `~/.wslconfig` |
 | WSL | `run_onchange_after_40-wsl.ps1` | installs WSL 2 + Ubuntu (admin) |
+| WSL Linux configs | `wsl/home/` | `~` inside Ubuntu, via `wsl/setup.sh` |
 
 nvim is the default editor (`$EDITOR`, git). Plugins install on first launch (lazy.nvim); treesitter
 parsers are compiled with zig. Zellij starts locked: `Ctrl g` unlocks it, and `zellij --layout agent`
@@ -45,17 +46,17 @@ holds login tokens and chat history and must never be committed.
 ## WSL
 
 Run as admin, `chezmoi apply` installs WSL 2 with Ubuntu. After that, reboot and open **Ubuntu** once to
-create your Linux user. Then, inside Ubuntu, install the Linux dotfiles (a separate repo, not chezmoi:
-its `install.sh` installs apt packages and tools, then symlinks the configs with GNU Stow; this repo
-only handles the Windows side, including `~/.wslconfig`):
+create your Linux user. Then set up the Linux side from PowerShell:
 
-```sh
-git clone https://github.com/Sviatoslav93/dotfiles.git ~/dotfiles
-cd ~/dotfiles && ./install.sh
+```powershell
+wsl -d Ubuntu -- bash /mnt/d/windows-dotfiles/wsl/setup.sh
 ```
 
-`install.sh` was written for desktop Ubuntu, so a few steps (WezTerm, fonts, Flatpak/LocalSend,
-Syncthing, zram) are not useful inside WSL, and zram may fail there and stop the script early.
+`wsl/home/` holds a WSL-only copy of a few configs from the Linux dotfiles
+(github.com/Sviatoslav93/dotfiles): git, zsh, starship, nvim, lazygit and zellij. `setup.sh` installs
+the tools they need (zsh plugins via antidote, Neovim 0.11+, lazygit, zellij, starship, fzf, ripgrep,
+eza, zoxide, delta), copies the configs into `~`, and makes zsh the default shell. Re-run it after
+editing anything in `wsl/home/`. Commit signing in WSL turns on only if `~/.ssh/id_ed25519.pub` exists there.
 
 After editing `~/.wslconfig`, run `wsl --shutdown` so the new settings take effect.
 

@@ -1,0 +1,2 @@
+# Files used inside WSL must keep Linux line endings
+wsl/** text eol=lf
