@@ -80,6 +80,13 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{e02fac13-7e22-5f5c-9e14-2bd7e671eac9}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL",
+                "startingDirectory": "~"
             }
         ]
     },
